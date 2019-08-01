@@ -25,7 +25,6 @@ public class Sql2oTaskDao implements TaskDao { //implementing our interface
             System.out.println(ex); //oops we have an error!
         }
     }
-
     @Override
     public List<Task> getAll() {
         try(Connection con = sql2o.open()){

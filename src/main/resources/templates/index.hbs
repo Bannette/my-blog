@@ -1,14 +1,14 @@
 {{#partial "content"}}
-    <h1>POST YOUR BLOG</h1>
 
-    {{#if posts}} <!--if posts exist, then -->
-    {{#each posts}} <!--loop-->
-    <p>Current post:</p>
-    <p> {{ content }}  <a href="/posts/{{id}}">READ THE POST..</a> </p>  <!--show-->
-    {{/each}}
-    {{else}} <!--no posts!-->
-    <p>No posts!</p>
+    <h1> List o' stuff to do!</h1>
+
+    {{#if tasks}}
+        {{#each tasks }}
+            <p><a href="/categories/{{categoryId}}/tasks/{{id}}">{{description}}</a></p>
+        {{/each}}
+    {{else}}
+     <p>No tasks!</p>
     {{/if}}
-
 {{/partial}}
+
 {{> layout.hbs}}
